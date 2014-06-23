@@ -18,3 +18,10 @@ configure :build do
 	activate :minify_javascript
 	activate :relative_assets
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+
+  deploy.branch = "master"
+
+end
