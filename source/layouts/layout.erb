@@ -5,7 +5,7 @@
 <!--[if IE 9]><html lang="es-ES" class="ie ie9"><![endif]-->
 <!--[if gt IE 9]><html lang="es-ES" class="ie"><![endif]-->
 <!--[if !IE]><!-->
-<html lang="es-ES">
+<html lang="en">
 <!--<![endif]-->
 <head>
 	<!--[if IE]><![endif]-->
@@ -20,6 +20,7 @@
 	<%= stylesheet_link_tag "styles" %>
 	<%= yield_content :styles %>
 
+
 	<%= javascript_include_tag  "main" %>
 	<%= yield_content :js %>
 </head>
@@ -28,8 +29,8 @@
 		jQuery('body:not(.js)').addClass('js');
 	</script>
 
-	<div id="wrapper">
+	<!--<div id="wrapper">-->
 		<%= yield %>
-	</div>
+	<!--</div>-->
 </body>
 </html>

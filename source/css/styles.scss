@@ -1,2 +1,166 @@
 @import "settings/vars";
 @import "settings/imports";
+
+$mobile: new-breakpoint(max-width 480px 4);
+
+/* TEMPORARY STYLING FOR THE RE-DESIGN */
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: $base-color;
+  color: #fff;
+  font: 100% $eight-bit;
+  line-height: 1.75em;
+
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  background: url('/images/bg-car.jpg') center no-repeat;
+  //background: url('https://farm8.staticflickr.com/7305/12862343563_9a2f46a0fd_o_d.jpg') center no-repeat;
+  background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    @include background-image(linear-gradient(to bottom right, $accent-color, tint($base-color, 60%)));
+    opacity: 0.75;
+  }
+}
+
+.container {
+  @include outer_container();
+}
+
+.hello {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  font-family: $eight-bit;
+  line-height: 2em;
+
+  @include media($mobile) {
+    font-size: 1.5em;
+  }
+}
+
+.message {
+  //@include center(80%);
+  @include span_columns(10);
+  @include shift(1);
+  margin-top: 20%;
+  position: relative;
+  font-size: 1.15em;
+  font-weight: 300;
+  text-align: left;
+
+  @include media($mobile) {
+    font-size: 0.8em;
+    margin-top: 15%;
+  }
+
+  a {
+    color: $highlight-color;
+    text-decoration: none;
+    //border-bottom: 3px $accent-color dotted;
+    //
+    &:hover {
+      color: $accent-color;
+      border-bottom: 3px $accent-color dotted;
+    }
+  }
+}
+
+span.cursor {
+  display: inline-block;
+  font-size: 1.5em;
+  color: $base-color;
+  vertical-align: text-top;
+  margin-top: -0.5em;
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+
+  //line-height: 50px;
+
+  //font: Helvetica, sans-serif;
+  font-weight: normal;
+  //float: left;
+  @include animation(blink 1s linear 0s infinite);
+
+  @include media($mobile) {
+    //font-size: 1em;
+  }
+  //padding-left: 8px;
+}
+
+ul.social {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  font-size: 0.75em;
+  margin: 0 auto;
+  float: left;
+  clear: left;
+}
+
+ul.social li {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+
+  a {
+    text-align: center;
+    //color: #fff;
+    //border-bottom: 4px $base-color dotted;
+  }
+}
+
+.info {
+  @include media($mobile) {
+    //font-size: 0.2em;
+    font-size: 0.6em;
+  }
+}
+/* ANIMATION STUFF */
+.scale {
+  /*@include transition(transform() 1s ease);*/
+  @include transition-property(transform, color);
+  @include transition-duration(250ms, 200ms);
+  @include transition-timing-function(ease-in-out);
+}
+
+.scale:hover {
+  /*@include transform(rotate(360deg));*/
+  @include transform(scale(1.5));
+  /*@include transform(rotate(180deg));*/
+}
+
+.btn:hover {
+  @include transition(all 0.25s ease-in);
+}
+
+@include keyframes(blink) {
+  from, to {
+    color: transparent;
+  }
+
+  50% {
+    color: $base-color;
+  }
+}
+
