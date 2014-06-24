@@ -17,12 +17,14 @@
 
 	<title><%= current_page.data.title || "Sample Page" %></title>
 
+
 	<%= stylesheet_link_tag "styles" %>
 	<%= yield_content :styles %>
 
 
 	<%= javascript_include_tag  "main" %>
 	<%= yield_content :js %>
+
 </head>
 <body>
 	<script>
@@ -32,5 +34,11 @@
 	<!--<div id="wrapper">-->
 		<%= yield %>
 	<!--</div>-->
+
+	<script>
+		var nav = responsiveNav(".nav-collapse", {
+			insert: "after"
+		});
+	</script>
 </body>
 </html>

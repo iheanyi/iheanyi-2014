@@ -1,4 +1,5 @@
 //= require jquery
+//= require responsive-nav
 
 var showText = function (target, message, index, interval) {
   if (index < message.length) {
