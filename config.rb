@@ -1,4 +1,20 @@
-activate :livereload, :apply_css_live => false
+activate :blog do |blog|
+  #blog.prefix="blog"
+  blog.name="projects"
+  blog.prefix="projects"
+  blog.permalink="{year}/{title}.html"
+  blog.sources="{year}-{month}-{day}-{title}.html"
+end
+
+activate :blog do |blog|
+  blog.name="blog"
+  blog.prefix="posts"
+  blog.permalink="{title}.html"
+  blog.sources="{year}-{month}-{day}-{title}.html"
+end
+
+activate :directory_indexes
+activate :livereload
 
 set :css_dir, 'css'
 set :js_dir, 'js'

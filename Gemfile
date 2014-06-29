@@ -6,6 +6,7 @@ gem "sass", "~> 3.3.0"
 #gem "middleman", "~> 3.3.0"
 gem "middleman-core", ">= 3.3.0"
 gem "middleman", ">= 3.3.0"
+gem "middleman-blog"
 
 # Live-reloading plugin
 gem "middleman-livereload", ">= 3.1.0"
@@ -15,3 +16,4 @@ gem 'compass', '~> 1.0.0.alpha.19'
 gem "wdm", ">= 0.1.0", :platforms => [:mswin, :mingw]
 
 gem "middleman-deploy"
+gem "nokogiri"
