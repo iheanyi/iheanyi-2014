@@ -1,0 +1,10 @@
+---
+title: HPMS
+date: 2014-06-28 20:42 UTC
+type: projects
+github_url: https://github.com/iheanyi/Flask-HPMS
+category: projects
+description: |
+          This was our final project for Healthcare Analytics, Healthcare Prescription Management System serves as a way for hospitals to keep track of their patients, medications, and offer a mobile way to remind nurses to give their patients their next dosage of medication.
+tags: web design
+---

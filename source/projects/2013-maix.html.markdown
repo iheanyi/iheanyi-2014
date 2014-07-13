@@ -1,0 +1,10 @@
+---
+title: MAIX
+date: 2014-06-28 20:42 UTC
+type: projects
+github_url:
+category: projects
+description: |
+          Developed during the Summer of 2013 during my internship at IBM, allows for remote access and management of AIX servers from a user's Android device. Users can create LPARs, new machines, and resources at the click of a button from their phones.
+tags: web design
+---

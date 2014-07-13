@@ -1,0 +1,57 @@
+<div id="projects" class="works">
+  <div class="works-container">
+      <div class="works-content">
+        <h3 class="heading big-heading">What Have I Developed?</h3>
+        <h4 class="center">Note: Proprietary/research-related projects will not have repo or demo URLs due to non-disclosure agreements. In the future, these project headers will link to their case studies.</h4>
+
+        <div class="works-content">
+          <ul class="">
+            <% blog("projects").articles[0..5].each do |article| %>
+            <li>
+
+                <h3 class="center"><%= article.title %></h3>
+
+                <p><%= article.data.description %></p>
+
+                <p>
+                  <% if article.data.demo_url %>
+                    <a class="demo-link" href=<%= article.data.demo_url %>>take a look</a>
+                  <% end %>
+
+                  <% if article.data.demo_url and article.data.github_url %>
+                    |
+                  <% end %>
+                  <% if article.data.github_url %>
+                    <a class="source-link" href=<%= article.data.github_url %>>view github repo</a>
+                  <% end %>
+                </p>
+              </li>
+            <% end %>
+            <div class="show-more">
+              <% blog("projects").articles[6..-1].each do |article| %>
+              <li>
+                  <h3 class="center"><%= article.title %></h3>
+
+                  <p><%= article.data.description %></p>
+
+                  <p>
+                    <% if article.data.demo_url %>
+                      <a class="demo-link" href=<%= article.data.demo_url %>>take a look</a>
+                    <% end %>
+
+                    <% if article.data.github_url %>
+                      <a class="source-link" href=<%= article.data.github_url %>>view github repo</a>
+                    <% end %>
+                  </p>
+                </li>
+              <% end %>
+            </div>
+          </ul>
+
+            <div class="show-more-button">
+              <button class="more-button ion-ios7-plus">Show More Projects <i class=""></i></button>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

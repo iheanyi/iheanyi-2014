@@ -1,0 +1,1072 @@
+@import "settings/vars";
+@import "settings/imports";
+
+$mobile: new-breakpoint(max-width 500px 4);
+$tablet: new-breakpoint(min-width 760px 8);
+
+/* TEMPORARY STYLING FOR THE RE-DESIGN */
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: $base-color;
+  color: #fff;
+  font: 100% $roboto-stack;
+  line-height: 1.75em;
+}
+
+.container {
+  @include outer-container;
+}
+
+/* GLOBALS */
+
+.content {
+  z-index: 100;
+}
+
+
+.info {
+  @include media($mobile) {
+    //font-size: 0.2em;
+    font-size: 0.7em;
+  }
+}
+
+/* NAVIGATION MODELING */
+
+.navigation {
+
+  //display: block;
+  //@include fill-parent;
+  width: 100%;
+  color: $base-color;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  //width: 20%;
+  height: 80px;
+  z-index: 9999;
+  //width: 100%;
+  vertical-align: middle;
+
+  @include media($mobile) {
+    @include reset-all();
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.nav-toggle {
+  color: #fff;
+  text-decoration: none;
+  background: $accent-color;
+  font-weight: 300;
+  text-align: center;
+  font-size: 0.9em;
+  width: 75px;
+  padding: 4px;
+  right: 0;
+  top: 0;
+  border-radius: 4px;
+  margin-right: 12px;
+  margin-top: 12px;
+  @include transition(all 1 ease-in);
+  z-index: 1000;
+  float: right;
+}
+
+.nav-toggle:before {
+  content: '\f20e';
+  font-family: ionicons;
+  padding-right: 8px;
+  -webkit-transition: content 4s;
+  transition: content 4s;
+  z-index: 1000;
+}
+
+.nav-toggle.active {
+  -webkit-transition: content 4s;
+  transition: content 4s;
+  &:before {
+    content: '\f2d7';
+    font-family: ionicons;
+    padding-right: 8px;
+  }
+}
+
+nav {
+  color: $base-color;
+  background-color: $accent-color;
+  background: none;
+  width: 100%;
+  height: 80px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 80px;
+
+  @include media($mobile) {
+    background-color: $accent-color;
+    width: 100%;
+    line-height: 40px;
+  }
+
+  ul.nav-list {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    //left: 0;
+    //width: 100%;
+    font-weight: 300;
+    text-align: right;
+    vertical-align: middle;
+    @include span-columns(8);
+
+    @include media($mobile) {
+      width: 100%;
+    }
+
+
+    li {
+      font-size: 1.25em;
+      text-align: center;
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+      text-align: center;
+      padding-right: 20px;
+      font-weight: 300;
+
+      &:first-child {
+        display: none;
+        @include media($mobile) {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0px;
+      }
+
+      @include media($mobile) {
+        border-bottom: 2px dotted $highlight-color;
+        display: block;
+        padding: 4px;
+        font-size: 1;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0;
+      }
+
+      a {
+
+        color: #fff;
+        color: $base-color;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        /* While mobile, we want to see what will normally be the tooltip of our menu while on a desktop */
+
+
+        @include media($mobile) {
+          color: $highlight-color;
+
+        }
+        &.active {
+          color: $highlight-color;
+
+          @include media($mobile) {
+            color: $highlight-color;
+          }
+        }
+
+
+          /*&:after {
+            //content: attr(data-hint);
+            //padding-left: 4px;
+            //content: attr(data-hint);
+            vertical-align: middle;
+            padding-left: 8px;
+            padding-right: 4px;
+            @include media($mobile) {
+              content: attr(data-hint);
+              padding-left: 12px;
+          }
+        }*/
+
+        &:hover {
+          //background-color: $accent-color;
+          color: $base-color;
+          border-bottom: 4px solid $accent-color;
+        }
+      }
+    }
+  }
+}
+
+.opened {
+  max-height: 100%;
+  height: 100%;
+}
+
+
+/* *
+ *
+ *
+ * Main Styles!
+ *
+ * */
+
+
+.brand {
+  @include span-columns(4);
+  display: block;
+  vertical-align: middle;
+
+  @include media($mobile) {
+    display: none;
+  }
+
+}
+
+.brand-logo {
+  text-decoration: none;
+  font-size: 1.4em;
+  color: $base-color;
+  letter-spacing: 3px;
+  font-weight: 700;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.hidden-brand {
+  display: none;
+  visibility: hidden;
+  @include media($mobile) {
+    display: block;
+  }
+}
+
+
+
+/**
+*
+* HEADER STYLES
+*
+**/
+.test {
+  width: 100%;
+  position: relative;
+}
+.header {
+  background-color: $highlight-color;
+  background-image: url('/images/cubes.png');
+  background-size: auto;
+  width: 100%;
+  height: 700px;
+  color: $accent-color;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  @include media($mobile) {
+    color: $accent-color;
+    height: 500px;
+  }
+}
+
+.message-container {
+  @include outer-container;
+  height: 500px;
+  position: relative;
+  display: block;
+
+  @include media($mobile) {
+    padding: 16px;
+    text-align: center;
+  }
+}
+.message {
+  //@include span-columns(6);
+  //@include shift(3);
+
+  //padding: 16px;
+
+  //@include(shift)
+  @include span-columns(8);
+  @include shift(2);
+  position: relative;
+  font-weight: 300;
+  top: 40%;
+  height: 500px;
+  line-height: 2em;
+  //margin-top: -250px;
+
+  @include media($mobile) {
+      @include span-columns(4);
+      @include shift(0);
+
+      top: 50%;
+      height: 300px;
+      margin-top: -150px;
+      font-size: 0.8em;
+      text-align: center;
+  }
+
+.hello {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-align: left;
+  font-size: 4em;
+  font-family: $eight-bit;
+  line-height: 2em;
+
+  @include media($mobile) {
+    font-size: 1.75em;
+  }
+}
+
+.subtext {
+  color: $accent-color;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+
+  }
+}
+
+
+
+span.cursor {
+  display: inline-block;
+  font-size: 1.5em;
+  color: $base-color;
+  vertical-align: text-top;
+  margin-top: -0.5em;
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+
+
+  font-weight: normal;
+  @include animation(blink 1s linear 0s infinite);
+
+  @include media($mobile) {
+  }
+}
+
+
+
+.hello {
+  font-size: 2.5em;
+  text-align: center;
+
+  @include media($mobile) {
+    font-size: 1.75em;
+  }
+}
+
+
+
+  a {
+    color: $highlight-color;
+    text-decoration: none;
+
+  }
+}
+
+
+.intro, .check {
+  weight: 500;
+  //font-size: 0.9em;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.intro {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.check {
+  text-align: center;
+  weight: 700;
+  margin-top: 24px;
+  @include media($mobile) {
+    margin-top: 20px;
+  }
+}
+
+.btn-resume {
+  background-color: $base-color;
+  display: block;
+  //width: 100%;
+  width: 40%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 500;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-size: 1.25em;
+  position: relative;
+  margin: 0 auto;
+  @include transition(color font-size 0.5s ease-in);
+
+  @include media($mobile) {
+    width: 80%;
+  }
+  &:hover {
+    color: white;
+    font-size: 1.5em;
+  }
+}
+
+.arrow {
+  color: #fff;
+  font-size: 4em;
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+
+
+  @include animation(levitate 1s ease 0s infinite);
+
+  @include media($mobile) {
+      font-size: 3em;
+  }
+
+
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* SKILLSET SKILLSET SKILLSET
+
+  WHAT CAN BROWN DO FOR YOU?
+ */
+
+.skill-set {
+  position: relative;
+  height: 800px;
+  //background-color: #f9f9f9;
+  background-color: #ffffff;
+  //background-color: ;
+  color: #343838;
+
+  @include media($mobile) {
+    height: 1200px;
+  }
+
+}
+
+.services-grid {
+  //@include span-columns(12);
+  //position: relative;
+}
+
+.service-container {
+  @include outer-container;
+  height: 700px;
+  position: relative;
+  display: block;
+
+  @include media($mobile) {
+    height: 1100px;
+  }
+}
+.service-content {
+  @include outer-container;
+  position: absolute;
+  top: 50%;
+  margin-top: -250px;
+  height: 500px;
+  //width: 100%;
+  //font-size: 1.25em;
+  font-size: 1.25em;
+
+  @include media($mobile) {
+    height: 900px;
+    margin-top: -450px;
+  }
+
+  .third {
+    margin-top: 24px;
+    @include span-columns(4);
+    //@include omega(3n);
+
+      @include media($mobile) {
+        font-size: 1.1em;
+      }
+
+    .service-logo {
+      font-size: 4em;
+      text-align: center;
+      margin-bottom: 16px;
+      color: $highlight-color;
+
+      @include media($mobile) {
+        font-size: 3em;
+      }
+
+
+    }
+
+    h3 {
+      //margin-top: 10px;
+
+      @include media($mobile) {
+        font-size: 0.8em;
+        margin-top: 12px;
+      }
+    }
+
+    p {
+      font-size: 0.9em;
+      margin-top: 16px;
+
+      @include media($mobile) {
+        font-size: 0.6em
+      }
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+      @include omega();
+
+      margin-bottom: 16px;
+      @include pad();
+      //padding: 16px;
+    }
+
+    .card-header {
+      font-weight: bold;
+      color: #343838;
+    }
+  }
+}
+
+
+
+
+
+
+.center {
+  text-align: center;
+}
+/* ABOUT ME SECTION
+
+  This section is responsible for handling small snippets of information about me, nothing too verbose.
+
+ */
+
+.heading {
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  @include media($mobile) {
+    font-size: 1.4em;
+  }
+}
+
+
+.about-me {
+  //width: 100%;
+  //height: 100%;
+  height: 800px;
+  position: relative;
+  //display: table;
+  background: url('/images/bg-forest.jpg') top no-repeat;
+  background-size: cover;
+  color: #fff;
+
+  @include media($mobile) {
+    height: 600px;
+  }
+
+  .about-container {
+    @include outer-container;
+    height: 700px;
+    position: relative;
+    display: block;
+
+    @include media($mobile) {
+      padding: 16px;
+      //text-align: center;
+    }
+  }
+
+  p {
+    letter-spacing: 1px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px dotted $accent-color;
+    font-weight: bold;
+    color: $accent-color;
+    @include transition(all 0.5s ease-in);
+
+    &:hover {
+      color: $highlight-color;
+      //border-bottom: 2px solid $highlight-color;
+      border-bottom: none;
+    }
+
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    @include background-image(linear-gradient(to bottom right, $accent-color, tint($base-color, 60%)));
+    opacity: 0.75;
+    color: #fff;
+    //z-index: -1;
+  }
+}
+
+
+.about-content {
+  @include span-columns(8);
+  @include shift(2);
+  position: absolute;
+  z-index: 100;
+  font-size: 1.25em;
+
+  height: 500px;
+  top: 65%;
+  margin-top: -250px;
+  line-height: 2em;
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+
+    top: 50%;
+    padding: 1em;
+    line-height: 1.25em;
+  }
+
+  .info {
+    font-weight: 300;
+  }
+}
+
+
+
+/* SELECT WORKS */
+
+.works {
+  //height: 800px;
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 0;
+  padding-top: 36px;
+  padding-bottom: 36px;
+
+
+
+  @include reset-display;
+  color: #45484B;
+
+  @include media($mobile) {
+    //color: $accent-color;
+  }
+
+  .works-container {
+    @include outer-container;
+
+    clear: both;
+
+  }
+
+  .project-links {
+
+  }
+
+  .works-content {
+    line-height: 2em;
+    //font-size: 1.25em;
+
+    ul {
+      //display: block;
+      list-style: none;
+      //@include outer-container;
+      margin: 0;
+      padding: 0;
+      //font-size: 0.75em;
+
+      li {
+        display: inline-block;
+        @include span-columns(4);
+        @include omega(3n);
+        @include pad();
+        background-color: #fff;
+        margin-bottom: 12px;
+        padding-bottom: 0;
+        padding-top: 0;
+        border-radius: 4px;
+
+        @include media($mobile) {
+          @include span-columns(4);
+          @include omega();
+          //@include pad();
+        }
+
+        .source-link {
+          //float: right;
+          text-align: right;
+        }
+
+        a {
+          text-decoration: none;
+          color: $accent-color;
+          font-weight: bold;
+          font-variant: small-caps;
+          font-size: 1.25em;
+
+
+          &:hover {
+            color: $highlight-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.show-more {
+  display: none;
+}
+
+.show-more-button {
+  text-align: center;
+  margin: 0 auto;
+}
+.more-button, .less-button {
+  margin-top: 10px;
+  cursor: pointer;
+  background: #fff;
+  background: $base-color;
+  color: #fff;
+  padding: 16px;
+  border: 0;
+  @include span-columns(6);
+  @include shift(3);
+
+  text-align: center;
+  font-size: 1.4em;
+  @include transition(all 150ms 200ms ease-in-out);
+
+  @include media($mobile) {
+    @include span-columns(2);
+    //@include shift(0);
+
+    //@include shift(1);
+    font-size: 1em;
+  }
+
+  &:before {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    @include span-columns(6);
+    @include shift(3);
+    padding: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: $base-color;
+    color: #fff;
+    border-bottom: 4px solid $accent-color;
+
+
+    &:after {
+      content: "";
+
+    }
+  }
+
+  &:after{
+    //content: "Want to see more?";
+    @include transition(all 250ms 200ms ease-in-out);
+
+    &:hover {
+      //content: "Load More";
+    }
+  }
+}
+
+
+/* CONTACT RELATED SECTION */
+
+.contact {
+  height: 600px;
+  //background-color: #fff;
+
+  background-color: #fff;
+  //background-image: url('/images/always-grey.png');
+  background-size: auto;
+  width: 100%;
+  color: $accent-color;
+
+  .contact-container {
+    @include outer-container;
+    position: relative;
+    display: block;
+    height: 500px;
+
+    .contact-content {
+      @include outer-container();
+      position: absolute;
+      line-height: 2em;
+      height: 300px;
+      margin-top: -150px;
+      top: 50%;
+      font-size: 1.25em;
+      font-weight: 300;
+
+      @include media($mobile) {
+        height: 400px;
+        margin-top: -200px;
+        top: 50%;
+      }
+      //margin-top: -250px;
+      p {
+        @include span-columns(8);
+        @include shift(2);
+        //font-size: 1.15em;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 2px dotted $accent-color;
+        font-weight: bold;
+        color: $accent-color;
+        @include transition(all 0.5s ease-in);
+
+        &:hover {
+          color: $highlight-color;
+          //border-bottom: 2px solid $highlight-color;
+          border-bottom: none;
+        }
+
+      }
+
+
+
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: $highlight-color;
+  height: 150px;
+  color: $base-color;
+  letter-spacing: 1px;
+
+  @include media($mobile) {
+    height: 300px;
+  }
+
+  .footer-container {
+    @include outer-container;
+    position: relative;
+    display: block;
+    height: 150px;
+
+    .footer-content {
+      //@include outer-container;
+      @include fill-parent;
+      position: absolute;
+      height: 100px;
+      margin-top: -50px;
+      top: 50%;
+
+
+      .ref-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 300;
+        @include transition(all 250ms 200ms ease-in-out);
+
+        &:hover {
+          border-bottom: 2px dotted $base-color;
+          @include transform(scale(1.25));
+        }
+
+      }
+
+      ul {
+        list-style: none;
+        display: block;
+
+        li {
+          display: inline;
+          font-size: 2.25em;
+          font-weight: bold;
+          margin-right: 16px;
+          color: $base-color;
+
+          @include media($mobile) {
+            margin-top: 8px;
+          }
+
+
+          &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+          }
+
+          a {
+            font-weight: bold;
+            text-align: right;
+            color: #fff;
+            @include transition(all 150ms 200ms ease-in-out);
+
+            &:before {
+              border: 2px dotted $base-color;
+              padding: 4px;
+              border-radius: 50%;
+              height: 36px;
+              width: 36px;
+              text-align: center;
+              @include transition(all 150ms 200ms ease-in-out);
+
+              &:hover {
+                background-color: $base-color;
+              }
+
+              @include media($mobile) {
+                margin-top: 8px;
+              }
+            }
+
+            &:hover:before {
+              background: $base-color;
+
+            }
+
+            &:hover {
+              //color: $accent-color;
+              //background: $accent-color;
+            }
+
+            &:last-child {
+              padding-right: 0;
+              margin-right: 0;
+            }
+
+          }
+        }
+      }
+      .footer-left {
+        @include span-columns(6);
+      }
+
+      .footer-right {
+        @include span-columns(6);
+        float: right;
+        margin-right: 0;
+        text-align: right;
+
+      }
+    }
+  }
+}
+
+
+/* MISCELLANOUS STYLES */
+
+.big-heading {
+  font-size: 2.5em;
+}
+.green-accent {
+  font-weight: bold;
+  color: $accent-color;
+}
+/* ANIMATION STUFF */
+.scale {
+  /*@include transition(transform() 1s ease);*/
+  @include transition-property(transform, color, border);
+  @include transition-duration(250ms, 200ms);
+  @include transition-timing-function(ease-in-out);
+  overflow: show;
+}
+
+.scale:hover {
+  /*@include transform(rotate(360deg));*/
+  @include transform(scale(1.25));
+  border-bottom: 4px solid $accent-color;
+  color: #fff;
+  /*@include transform(rotate(180deg));*/
+}
+
+.btn {
+  @include transition(transform 0.25s ease-in);
+}
+.btn:hover {
+  @include transform(scale(1.25));
+}
+
+.hide-desktop {
+  display: none;
+
+  @include media($mobile) {
+    //display: block;
+  }
+}
+
+@include keyframes(blink) {
+  from, to {
+    color: transparent;
+  }
+
+  50% {
+    color: $base-color;
+  }
+}
+
+@include keyframes(levitate) {
+  from, to {
+    margin-top: 0px;
+  }
+
+  50% {
+    margin-top: -20px;
+  }
+}
+
+.hide-desktop {
+  display: none;
+
+}

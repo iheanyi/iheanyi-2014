@@ -1,0 +1,14 @@
+---
+title: Spy-H
+date: 2014-06-28 20:42 UTC
+type: projects
+github_url:
+category: projects
+description: |
+          A security application written during my 2013 internship at IBM, I am unsure of how much I am able to discuss about this application due to NDA.
+tags: web design
+---
+
+Security Application developed during my 2013 internship with IBM, runs in conjunction with PowerSC's Real Time Compliance in order to store security violations and descriptive information in a database. The back-end, written in Python with Flask, captures security events through SMTP traps ands logs them and then uses Google Cloud Messaging to push notifications to authorized Android devices. Mobile users are then able to authenticate send commands from the Android device to automatically rollback the machines and fix the security violations.
+
+The back-end is written in Python with the Flask framework and uses RTC's security daemon to capture SMTP traps, store them in a database, and then use Google Cloud Messaging to alert users on Android devices, who can then authenticate and rollback affected servers with the push of a button.
