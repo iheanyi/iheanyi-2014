@@ -17,46 +17,376 @@
 
 	<title>Iheanyi Ekechukwu</title>
 
+
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />
 	
 
 
 	<script src="js/main.js" type="text/javascript"></script>
 	
+
 </head>
 <body>
-	<script>
+	<!--<script>
 		jQuery('body:not(.js)').addClass('js');
-	</script>
+	</script>-->
 
-	<!--<div id="wrapper">-->
-		<div class="bg-image">
-  <div class="container">
-    <div class="message">
+		      <div id="header" class="header">
+    <div class="navigation">
+    <div class="container">
+      <nav class="nav-collapse">
+        <div class="brand">
+          <a class="brand-logo" href="#header">//iheanyi</a>
+        </div>
 
-      <h1 class="hello"><span class="cursor">_</span></h1>
+        <ul class="nav-list">
+          <li class="hide-desktop"><a class="hide-desktop" href="">//iheanyi.</a></li>
+<!--           <li class="scale"><a class=""  href="">Home</a></li>
+ -->          <li class=""><a class="scale" href="#about-section">About</a></li>
+           <li class=""><a class="scale" href="#skills">Skills</a></li>
+              <li class=""><a href="#projects" class="scale">Projects</a></li>
+<!--           <li class="scale"><a href="" class="">Blog</a></li>
+ -->          <li class=""><a href="#contact" class="scale">Contact</a></li>
+        </ul>
+      </nav>
+  </div>
+</div>
+
+  <div class="message-container">
+          <div class="message">
+            <h1 class="hello"><span class="cursor">_</span></h1>
+
+            <div class="subtext">
+
+              <p class="intro">I'm <span class="bold">Iheanyi Ekechukwu</span>, a software developer, designer, and digital craftsman.</p>
+
+              <p class="bold">Warning: Site has all relevant content, but the CSS and JavaScript to make the UX better are still a WIP. :D</p>
+
+              <a rel="_blank" href="/images/IheanyiShortResume.pdf" class="btn-resume scale">View My Résumé</a>
+
+              <p class="check bold">Scroll down to learn more about me.</p>
+
+              <div class="ion-ios7-arrow-down arrow"></div>
+
+            </div>
+
+
+          </div>
+    </div>
+</div>
+
+
+      <div id="about-section" class="about-me">
+  <div class="about-container">
+    <div class="about-content">
+      <h3 class="heading">What's My Story?</h3>
 
       <div class="info">
-        <p>I'm Iheanyi, a web developer and University of Notre Dame student. I'm currently coding my new portfolio design but if you want, you can <a href="http://iheanyi.com/iheanyi-old">view my old site</a> or <a href="images/IheanyiShortResume.pdf">view my résumé</a>.</p>
-
-        <p>Feel free to <a href="mailto:hello@iheanyi.com">e-mail me</a> or visit me on other areas of the web! :)</p>
-        <ul class="social">
-          <li><a href="mailto:hello@iheanyi.com">E-Mail</a></li> &diams;
-
-          <li><a href="http://github.com/iheanyi">GitHub</a></li> &diams;
-
-          <li><a href="http://twitter.com/kwuchu">Twitter</a></li> &diams;
-
-          <li><a href="https://www.linkedin.com/in/iheanyi">LinkedIn</a> &diams;</li>
-          <li><a href="https://dribbble.com/iheanyi">Dribbble</a></li> &diams;
-
-          <li><a href="http://www.rdio.com/iheanyi">Rdio</a></li>
-
-        </ul>
+        <p>I'm originally from Myrtle Beach, South Carolina, but moved to the Midwest to study at the University of Notre Dame. I will with graduate a Bachelor of Science in Computer Science and a Bachelor of Arts in Design in the Winter of 2014 and from there, I do not know where I will end up. When I'm not pushing around pixels or building out one of my many ideas, you can most likely find me photographing, longboarding, drinking coffee, or bboying. Feel free to <a href="mailto:hello@iheanyi.com" class="fancy-link">get in touch</a> with me, especially if you have questions about anything!</p>
       </div>
     </div>
   </div>
 </div>
-	<!--</div>-->
+
+      <div id="skills" class="skill-set">
+  <div class="service-container">
+
+    <div class="service-content">
+      <h3 class="heading">What Can I Do?</h3>
+
+      <!--<div class="services-grid">-->
+      <div class="third">
+
+        <div class="ion-android-developer service-logo"></div>
+        <h3 class="card-header center">Web Development</h3>
+
+
+        <p>Not only am I able to do front-end development, but I also have experience with backend development in PHP, Python (Flask, some Django, CherryPy), and I'm currently dabbling with Ruby on Rails.</p>
+      </div>
+
+
+      <div class="third">
+        <div class="ion-social-android service-logo"></div>
+        <h3 class="card-header center">Android Development</h3>
+
+        <p>
+          I'm familiar with the Android SDK and Android Development, having developed five Android applications – two of my own and three that are proprietary or research-related. Within my applications, I do my best to follow Google's Design Guidelines to allow for a consistent user experience.
+        </p>
+
+      </div>
+      <div class="third">
+        <div class="ion-android-contact service-logo"></div>
+        <h3 class="card-header center">User Interface Design</h3>
+
+        <p>Before designing any of my websites and applications, I design the user interfaces, starting with a general wireframe and depending on the project, making a full mockup using Sketch. This allows me to get a general feel for how the user will interact with the website or application.</p>
+
+      </div>
+    </div>
+  <!--</div>-->
+  </div>
+</div>
+
+      <div id="projects" class="works">
+  <div class="works-container">
+      <div class="works-content">
+        <h3 class="heading big-heading">What Have I Developed?</h3>
+        <h4 class="center">Note: Proprietary/research-related projects will not have repo or demo URLs due to non-disclosure agreements. In the future, these project headers will link to their case studies.</h4>
+
+        <div class="works-content">
+          <ul class="">
+            <li>
+
+                <h3 class="center">Wabruda Website</h3>
+
+                <p>Website created for Wabruda, an African-American men's group at the University of Notre Dame. This was my first real responsive website, created with SASS, Bourbon, and Neat from scratch, with mockups done in Sketch.
+</p>
+
+                <p>
+                    <a class="demo-link" href=http://nd.edu/~wabruda>take a look</a>
+
+                </p>
+              </li>
+            <li>
+
+                <h3 class="center">Maya Rain Generator Script</h3>
+
+                <p>A simple Python script that allows the user to select a surface and automatically create a rain surface, whose raindrops will collide with the selected surface. Users can tweak the surfaces parameters using the GUI or after the surface is created as necessary.
+</p>
+
+                <p>
+
+                    <a class="source-link" href=https://github.com/iheanyi/Maya-Rain-Generator-Script>view github repo</a>
+                </p>
+              </li>
+            <li>
+
+                <h3 class="center">Tubalr Android</h3>
+
+                <p>My second Android application, a native application for Tubalr. Uses EchoNest's API for recommendations, Tubalr's API for playlists, and YouTube's API for music to playback. Awarded 2nd place at the Schurz Innovation Challenge and had 5,000+ installs.
+</p>
+
+                <p>
+                    <a class="demo-link" href=https://play.google.com/store/apps/details?id=com.iheanyiekechukwu.tubalr>take a look</a>
+
+                    |
+                    <a class="source-link" href=http://github.com/iheanyi/TubalrAndroid>view github repo</a>
+                </p>
+              </li>
+            <li>
+
+                <h3 class="center">Spy-H</h3>
+
+                <p>A security application written during my 2013 internship at IBM, I am unsure of how much I am able to discuss about this application due to NDA.
+</p>
+
+                <p>
+
+                </p>
+              </li>
+            <li>
+
+                <h3 class="center">OpenSight</h3>
+
+                <p>Android prototype application developed during Motorola's MakeWithMoto Makeathon. Proof-of-concept for mobile eye diagnostics and examinations for optometrists in developing countries. Awarded first place at the Motorola Makeathon in College Station, TX.
+</p>
+
+                <p>
+
+                    <a class="source-link" href=https://github.com/iheanyi/OpenSight>view github repo</a>
+                </p>
+              </li>
+            <li>
+
+                <h3 class="center">MAIX</h3>
+
+                <p>Developed during the Summer of 2013 during my internship at IBM, allows for remote access and management of AIX servers from a user's Android device. Users can create LPARs, new machines, and resources at the click of a button from their phones.
+</p>
+
+                <p>
+
+                </p>
+              </li>
+            <div class="show-more">
+              <li>
+                  <h3 class="center">Later</h3>
+
+                  <p>Android application developed as the final project for Human Computer. Purpose is to automate the sending/posting of messages via SMS, Facebook, or Twitter for a later and more convenient time so the user does not forget. Focus of this project was on User Experience, not on functionality.
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=https://github.com/iheanyi/Later>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">Irish Class Search</h3>
+
+                  <p>My first Android Application, allows for easy lookup of Notre Dame course information from an Android device. Course information is acquire through HTTP Requetss to Notre Dame's course search page and scraping the necessary information from the response page.
+</p>
+
+                  <p>
+                      <a class="demo-link" href=https://play.google.com/store/apps/details?id=com.iheanyiekechukwu.irishsearch>take a look</a>
+
+                      <a class="source-link" href=https://github.com/iheanyi/IrishSearch>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">HPMS</h3>
+
+                  <p>This was our final project for Healthcare Analytics, Healthcare Prescription Management System serves as a way for hospitals to keep track of their patients, medications, and offer a mobile way to remind nurses to give their patients their next dosage of medication.
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=https://github.com/iheanyi/Flask-HPMS>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">eSeniorCare</h3>
+
+                  <p>As a Research Assistant for iCeNSA, eSeniorCare is an Android application that communicates with a RESTful back-end to remind patients within a nursing home to take their medication and also survey them throughout their day to collect data on their physical, emotional, and mental health.
+</p>
+
+                  <p>
+
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">EasyCustomView</h3>
+
+                  <p>A quick Android experiment in creating a custom TextView for use in applications that allows for custom typeface definitions within the XML rather than having to repeat code.
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=https://github.com/iheanyi/EasyCustomView>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">Bandcamp Download</h3>
+
+                  <p>A Python script I developed for parsing and downloading songs from Bandcamp. Disclaimer: Made purely for educational purposes, not copyright infringement, please support creative talent. :)
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=https://github.com/iheanyi/bandcamp-dl>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">Audite</h3>
+
+                  <p>Online Music Recommendation Engine built with CherryPy, artist recommendations are provided through querying EchoNest's API and music streaming links are acquired through searching and parsing YouTube MP4 links from the respective video page.
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=https://github.com/iheanyi/Audite>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">Sweeper</h3>
+
+                  <p>A Python script that is used to automate simulations of molecular dynamics and protein-folding over a range of parameters and store these simulation results within a MySQL database after completion.
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=https://github.com/cooperative-computing-lab/cctools>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">Stellarium Scripts</h3>
+
+                  <p>Simple script created as an add-on for Stellarium which simulates the phases of the moon over the duration of the year 2012. This script was created as part of my group's final project for Data Structures, where we have to contribuet to open-source projects.
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=http://github.com/iheanyi/dbconcepts-final>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">Otter Swag</h3>
+
+                  <p>A side-scrolling game, built with C++ and the SDL graphics library in which you use the spacebar to allow the Otter to swim up and down in order to dodge incoming missiles and collect coins for points. This game was voted Best Class Project by our peers in Fundamentals of Computing II.
+</p>
+
+                  <p>
+
+                      <a class="source-link" href=https://github.com/iheanyi/otter-swag>view github repo</a>
+                  </p>
+                </li>
+              <li>
+                  <h3 class="center">iNCAA</h3>
+
+                  <p>PHP web application to visualize the stats of NCAA College football teams and their players, also allowed for simulated game results based on each specific team's stats and a Heisman Watch, tracking top candidates for the Heisman. The data was provided by STATS company in Chicago.
+</p>
+
+                  <p>
+                      <a class="demo-link" href=http://nd.edu/~iekechuk/dbconceptsfinal>take a look</a>
+
+                      <a class="source-link" href=http://github.com/iheanyi/dbconceptsfinal>view github repo</a>
+                  </p>
+                </li>
+            </div>
+          </ul>
+
+            <div class="show-more-button">
+              <button class="more-button ion-ios7-plus">Show More Projects <i class=""></i></button>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+      <div id="contact" class="contact">
+  <div class="contact-container">
+    <div class="contact-content">
+      <h3 class="heading big-heading">Let's Talk</h3>
+
+      <p class="contact-text">
+      I always welcome any emails that people may have, whether you want to talk careers, projects, or just talk about life in general. Don't be shy, feel free to <a class="fancy-link" href="mailto:hello@iheanyi.com">e-mail me</a> or contact me by other means, I look forward to hearing from you!
+      </p>
+
+    </div>
+    <!-- /.contact-content -->
+  </div>
+  <!-- /.contact-container -->
+</div>
+<!-- /.contact -->
+      <div class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+            <div class="footer-left">
+
+              <p>&copy; 2014 Iheanyi Ekechukwu.</p>
+
+              <p class="tools">Crafted with &#x2764;, <a class="ref-link" href="http://bourbon.io">Bourbon</a>, <a href="http://neat.bourbon.io" class="ref-link">Neat</a>, and <a class="ref-link" href="http://middlemanapp.com">Middleman</a>.</p>
+
+            </div>
+
+            <div class="footer-right">
+                <ul>
+                  <li><a href="" class="ion-ios7-email contact-link"></a></li>
+                  <li><a href="" class="ion-social-dribbble contact-link"></a></li>
+                  <li><a href="" class="ion-social-github contact-link"></a></li>
+                  <li><a href="" class="ion-social-linkedin contact-link"></a></li>
+                  <li><a href="" class="ion-social-twitter contact-link"></a></li>
+                </ul>
+            </div>
+
+    </div>
+    <!-- /.footer-content -->
+  </div>
+  <!-- /.footer-container -->
+</div>
+<!-- /.footer -->
+
+	<script>
+		var nav = responsiveNav(".nav-collapse", {
+			insert: "after"
+		});
+	</script>
 </body>
 </html>
