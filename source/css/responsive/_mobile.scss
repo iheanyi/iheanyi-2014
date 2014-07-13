@@ -268,7 +268,7 @@ nav {
 }
 .header {
   background-color: $highlight-color;
-  background-image: url('/images/cubes.png');
+  background-image: url('../images/cubes.png');
   background-size: auto;
   width: 100%;
   height: 700px;
@@ -595,7 +595,7 @@ span.cursor {
   height: 800px;
   position: relative;
   //display: table;
-  background: url('/images/bg-forest.jpg') top no-repeat;
+  background: url('../images/bg-forest.jpg') top no-repeat;
   background-size: cover;
   color: #fff;
 
