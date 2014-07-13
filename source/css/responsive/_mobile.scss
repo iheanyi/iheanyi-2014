@@ -896,6 +896,7 @@ span.cursor {
 
   @include media($mobile) {
     height: 300px;
+    @include pad;
   }
 
   .footer-container {
