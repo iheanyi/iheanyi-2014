@@ -2,8 +2,8 @@ activate :blog do |blog|
   #blog.prefix="blog"
   blog.name="projects"
   blog.prefix="projects"
-  blog.permalink="{year}/{title}.html"
-  blog.sources="{year}-{month}-{day}-{title}.html"
+  blog.permalink="{title}.html"
+  blog.sources="{year}-{title}.html"
 end
 
 activate :blog do |blog|

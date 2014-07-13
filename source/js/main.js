@@ -12,8 +12,14 @@ var showText = function (target, message, index, interval) {
 }
 
 $(function () {
-  /* Responsive Navigation */
-  //var nav = responsiveNav(".nav-collapse");
+
+  $('.more-button').click(function() {
+
+    $('.show-more').slideDown();
+    $(this).toggle().animate();
+
+  });
+
   /* Get current page URL */
   var currentPage = window.location.pathname;
   console.log(currentPage);
@@ -23,6 +29,8 @@ $(function () {
     showText(".cursor", "Who Am I? ", 0, 175);
   }
 });
+
+
 
 
 
