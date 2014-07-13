@@ -13,7 +13,7 @@ activate :blog do |blog|
   blog.sources="{year}-{month}-{day}-{title}.html"
 end
 
-activate :directory_indexes
+#activate :directory_indexes
 activate :livereload
 
 set :css_dir, 'css'
