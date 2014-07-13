@@ -39,6 +39,10 @@
                       <a class="demo-link" href=<%= article.data.demo_url %>>take a look</a>
                     <% end %>
 
+                    <% if article.data.demo_url and article.data.github_url %>
+                      |
+                    <% end %>
+
                     <% if article.data.github_url %>
                       <a class="source-link" href=<%= article.data.github_url %>>view github repo</a>
                     <% end %>
