@@ -18,14 +18,14 @@ $(function () {
     images:  '.about-me'
   })
 
-  $('.nav-list').onePageNav({
+ /*$('.nav-list').onePageNav({
     currentClass: 'current',
     changeHash: false,
     scrollSpeed: 750,
     scrollThreshold: 0.5,
     filter: '',
     easing: 'swing'
-  });
+  });*/
 
 
   $('nav').onePageNav({
