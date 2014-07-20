@@ -5,7 +5,7 @@ type: projects
 github_url:
 category: projects
 description: |
-          A security application written during my 2013 internship at IBM. Utilized Python and the Flask framework to detect and log security violations on servers and alert mobile devices using Google Cloud Messaging.
+          A security application written during my 2013 internship at IBM. Utilized Python and the Flask framework to detect and log security violations on servers. Authorized Android devices were then notified via push notifications through Google Cloud Messaging. Users are able to authenticate and rollback the affected machines directly from their mobile devices.
 tags: web design
 ---
 
