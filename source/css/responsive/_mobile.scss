@@ -115,6 +115,8 @@ nav {
     line-height: 40px;
   }
 
+
+
   ul.nav-list {
     list-style-type: none;
     display: block;
@@ -130,7 +132,6 @@ nav {
     @include media($mobile) {
       width: 100%;
     }
-
 
     li {
       font-size: 1.25em;
@@ -171,6 +172,7 @@ nav {
         text-align: center;
         display: inline-block;
         vertical-align: middle;
+        letter-spacing: 1px;
         /* While mobile, we want to see what will normally be the tooltip of our menu while on a desktop */
 
 
@@ -205,6 +207,38 @@ nav {
           color: $base-color;
           border-bottom: 4px solid $accent-color;
         }
+      }
+    }
+  }
+
+    .background--dark {
+    a {
+      color: #fff;
+      //font-weight: 300;
+    }
+
+    /*li {
+      color: #fff;
+
+      a {
+        color: #fff;
+        font-weight: 300;
+      }
+    }*/
+  }
+
+  a.background--dark {
+    color: #fff;
+  }
+
+  ul.background--dark {
+
+    li {
+      color: #fff;
+
+      a {
+        color: #fff;
+        font-weight: 300;
       }
     }
   }
@@ -243,7 +277,7 @@ nav {
   font-weight: 700;
 
   &:hover {
-    color: #fff;
+    color: $highlight-color;
   }
 }
 
@@ -442,6 +476,7 @@ span.cursor {
   text-align: center;
   padding-top: 20px;
   position: relative;
+  cursor: pointer;
 
 
   @include animation(levitate 1s ease 0s infinite);
@@ -449,8 +484,6 @@ span.cursor {
   @include media($mobile) {
       font-size: 3em;
   }
-
-
 }
 
 .bold {
@@ -623,7 +656,7 @@ span.cursor {
     color: #fff;
     text-decoration: none;
     border-bottom: 2px dotted $accent-color;
-    font-weight: bold;
+    font-weight: 700;
     color: $accent-color;
     @include transition(all 0.5s ease-in);
 
@@ -750,7 +783,7 @@ span.cursor {
         a {
           text-decoration: none;
           color: $accent-color;
-          font-weight: bold;
+          font-weight: 700;
           font-variant: small-caps;
           font-size: 1.25em;
 
@@ -806,7 +839,7 @@ span.cursor {
     @include shift(3);
     padding: 20px;
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 700;
     background: $base-color;
     color: #fff;
     border-bottom: 4px solid $accent-color;
@@ -833,8 +866,6 @@ span.cursor {
 
 .contact {
   height: 600px;
-  //background-color: #fff;
-
   background-color: #fff;
   //background-image: url('/images/always-grey.png');
   background-size: auto;
@@ -873,7 +904,7 @@ span.cursor {
         color: #fff;
         text-decoration: none;
         border-bottom: 2px dotted $accent-color;
-        font-weight: bold;
+        font-weight: 700;
         color: $accent-color;
         @include transition(all 0.5s ease-in);
 
@@ -940,7 +971,7 @@ span.cursor {
         li {
           display: inline;
           font-size: 2.25em;
-          font-weight: bold;
+          font-weight: 700;
           margin-right: 16px;
           color: $base-color;
 
@@ -955,7 +986,7 @@ span.cursor {
           }
 
           a {
-            font-weight: bold;
+            font-weight: 700;
             text-align: right;
             color: #fff;
             @include transition(all 150ms 200ms ease-in-out);

@@ -1,9 +1,10 @@
 //= require jquery
 //= require responsive-nav
+//= require jquery.scrollTo/jquery.scrollTo
+//= require jQuery-One-Page-Nav
 
 var showText = function (target, message, index, interval) {
   if (index < message.length) {
-    console.log("Executing!");
     $(target).before(message[index++]);
     setTimeout(function () { showText(target, message, index, interval); }, interval);
   } else {
@@ -12,6 +13,34 @@ var showText = function (target, message, index, interval) {
 }
 
 $(function () {
+  BackgroundCheck.init({
+    targets: '.color-swap',
+    images:  '.about-me'
+  })
+
+  $('.nav-list').onePageNav({
+    currentClass: 'current',
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing'
+  });
+
+
+  $('nav').onePageNav({
+    currentClass: 'current',
+    changeHash: false,
+    scrollSpeed: 750,
+    scrollThreshold: 0.5,
+    filter: '',
+    easing: 'swing'
+  });
+
+  $('#scroll-more').click(function() {
+    console.log("Clicked arrow!");
+    $.scrollTo('#about-section');
+  });
 
   $('.more-button').click(function() {
 
@@ -25,12 +54,7 @@ $(function () {
   console.log(currentPage);
   if (currentPage == '/') {
     showText(".cursor", "Hello, World! ", 0, 200);
-  } else if (currentPage == '/about') {
-    showText(".cursor", "Who Am I? ", 0, 175);
   }
 });
-
-
-
 
 
