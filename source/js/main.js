@@ -28,6 +28,12 @@ $(function () {
   });*/
 
 
+/*$(document).on('scroll', $('.message'), function() {
+  console.log('Scrolling event.');
+  //var headerOffset = $('#header').scrollTop();
+  //console.log(headerOffset);
+});*/
+
   $('nav').onePageNav({
     currentClass: 'current',
     changeHash: false,
