@@ -15,7 +15,12 @@ var showText = function (target, message, index, interval) {
 
 $(function () {
 
-  //var s = skrollr.init();
+  var windowWidth = $(window).width();
+  if (windowWidth > 600) {
+      var s = skrollr.init({
+        forceHeight: false,
+      });
+  }
 
   BackgroundCheck.init({
     targets: '.color-swap',
