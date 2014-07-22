@@ -212,7 +212,7 @@ nav {
     }
   }
 
-    .background--dark {
+    .background--dark, .background--light {
     a {
       color: #fff;
       //font-weight: 300;
@@ -228,11 +228,11 @@ nav {
     }*/
   }
 
-  a.background--dark {
+  a.background--dark, a.background--light {
     color: #fff;
   }
 
-  ul.background--dark {
+  ul.background--dark, ul.background--light {
 
     li {
       color: #fff;
