@@ -15,7 +15,7 @@ var showText = function (target, message, index, interval) {
 
 $(function () {
 
-  var s = skrollr.init();
+  //var s = skrollr.init();
 
   BackgroundCheck.init({
     targets: '.color-swap',
