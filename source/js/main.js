@@ -2,6 +2,7 @@
 //= require responsive-nav
 //= require jquery.scrollTo/jquery.scrollTo
 //= require jQuery-One-Page-Nav
+//= require skrollr
 
 var showText = function (target, message, index, interval) {
   if (index < message.length) {
@@ -13,10 +14,13 @@ var showText = function (target, message, index, interval) {
 }
 
 $(function () {
+
+  var s = skrollr.init();
+
   BackgroundCheck.init({
     targets: '.color-swap',
-    images:  '.about-me'
-  })
+    images:  '.about-me',
+  });
 
  /*$('.nav-list').onePageNav({
     currentClass: 'current',

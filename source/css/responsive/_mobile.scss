@@ -204,6 +204,7 @@ nav {
 
         &:hover {
           //background-color: $accent-color;
+          will-change: transform;
           color: $base-color;
           border-bottom: 4px solid $accent-color;
         }
@@ -277,6 +278,8 @@ nav {
   font-weight: 700;
 
   &:hover {
+    will-change: transform;
+
     color: $highlight-color;
   }
 }
@@ -465,6 +468,7 @@ span.cursor {
     width: 80%;
   }
   &:hover {
+    will-change: transform;
     color: white;
     font-size: 1.5em;
   }
@@ -692,7 +696,7 @@ span.cursor {
   font-size: 1.25em;
 
   height: 500px;
-  top: 65%;
+  top: 55%;
   margin-top: -250px;
   line-height: 2em;
 
@@ -704,7 +708,7 @@ span.cursor {
     //@include span-columns(4);
     //@include shift(0);
     //margin-top: 50px;
-    top: 50%;
+    top: 40%;
     padding: 1em;
     line-height: 1.25em;
   }
@@ -789,6 +793,7 @@ span.cursor {
 
 
           &:hover {
+            will-change: transform;
             color: $highlight-color;
           }
         }
@@ -853,7 +858,7 @@ span.cursor {
 
   &:after{
     //content: "Want to see more?";
-    @include transition(all 250ms 200ms ease-in-out);
+    @include transition(all 150ms 150ms ease-in-out);
 
     &:hover {
       //content: "Load More";
@@ -955,9 +960,10 @@ span.cursor {
         color: #fff;
         text-decoration: none;
         font-weight: 300;
-        @include transition(all 250ms 200ms ease-in-out);
+        @include transition(all 150ms 150ms ease-in-out);
 
         &:hover {
+          will-change: transform;
           border-bottom: 2px dotted $base-color;
           @include transform(scale(1.25));
         }
@@ -989,7 +995,7 @@ span.cursor {
             font-weight: 700;
             text-align: right;
             color: #fff;
-            @include transition(all 150ms 200ms ease-in-out);
+            @include transition(all 150ms 150ms ease-in-out);
 
             &:before {
               border: 2px dotted $base-color;
@@ -998,9 +1004,10 @@ span.cursor {
               height: 36px;
               width: 36px;
               text-align: center;
-              @include transition(all 150ms 200ms ease-in-out);
+              @include transition(all 150ms 150ms ease-in-out);
 
               &:hover {
+                will-change: transform;
                 background-color: $base-color;
               }
 
@@ -1010,6 +1017,8 @@ span.cursor {
             }
 
             &:hover:before {
+              will-change: transform;
+
               background: $base-color;
 
             }
@@ -1066,6 +1075,7 @@ span.cursor {
 }
 
 .scale:hover {
+  will-change: transform;
   /*@include transform(rotate(360deg));*/
   @include transform(scale(1.25));
   border-bottom: 4px solid $accent-color;
@@ -1076,7 +1086,9 @@ span.cursor {
 .btn {
   @include transition(transform 0.25s ease-in);
 }
+
 .btn:hover {
+  will-change: transform;
   @include transform(scale(1.25));
 }
 
