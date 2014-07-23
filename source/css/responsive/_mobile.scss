@@ -878,7 +878,7 @@ span.cursor {
   height: 650px;
   background-color: #fff;
   //background-image: url('/images/always-grey.png');
-  background-size: auto;
+  //background-size: auto;
   width: 100%;
   color: $accent-color;
 
@@ -897,6 +897,7 @@ span.cursor {
       top: 50%;
       font-size: 1.25em;
       font-weight: 300;
+      top: 50%;
 
       @include media($mobile) {
         height: 400px;
