@@ -2,7 +2,7 @@
 title: WhoBorrowed
 date: 2014-06-28 20:42 UTC
 type: projects
-demo_url: http://whoborrowed.iheanyi.com
+demo_url: http://whoborrow.iheanyi.com
 github_url: http://github.com/iheanyi/who_borrowed
 category: projects
 description: |
