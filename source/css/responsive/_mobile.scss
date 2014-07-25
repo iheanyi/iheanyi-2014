@@ -56,7 +56,6 @@ body {
 
   @include media($mobile) {
     @include reset-all();
-    height: 100%;
     width: 100%;
   }
 }
@@ -639,6 +638,7 @@ span.cursor {
   //display: table;
   background: url('../images/bg-forest.jpg') top no-repeat;
   background-size: cover;
+  width: 100%;
   color: #fff;
 
   @include media($mobile) {

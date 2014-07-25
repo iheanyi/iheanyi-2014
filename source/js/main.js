@@ -3,6 +3,7 @@
 //= require jquery.scrollTo/jquery.scrollTo
 //= require jQuery-One-Page-Nav
 //= require skrollr
+//= require stellar
 
 var showText = function (target, message, index, interval) {
   if (index < message.length) {
@@ -14,7 +15,7 @@ var showText = function (target, message, index, interval) {
 }
 
 $(function () {
-
+$(window).stellar({ horizontalScrolling: false });
   var windowWidth = $(window).width();
   if (windowWidth > 600) {
       var s = skrollr.init({
