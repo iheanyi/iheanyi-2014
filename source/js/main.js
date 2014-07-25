@@ -15,7 +15,8 @@ var showText = function (target, message, index, interval) {
 }
 
 $(function () {
-$(window).stellar({ horizontalScrolling: false });
+  $(window).stellar({ horizontalScrolling: false });
+  console.log("Finished loading background. :)");
   var windowWidth = $(window).width();
   if (windowWidth > 600) {
       var s = skrollr.init({
