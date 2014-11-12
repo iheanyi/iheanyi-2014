@@ -4,6 +4,7 @@
 //= require jQuery-One-Page-Nav
 //= require skrollr
 //= require stellar
+//= require isotope/jquery.isotope
 
 var showText = function (target, message, index, interval) {
   if (index < message.length) {
@@ -15,7 +16,25 @@ var showText = function (target, message, index, interval) {
 }
 
 $(function () {
+
+
+
   console.log("Finished loading background. :)");
+
+  /*$('#container').isotope({
+    itemSelector: '.item',
+    masonry: {
+      gutter: 10,
+      isFitWidth: true
+    },
+    layoutMode: 'masonry'
+  });*/
+
+  /*$('#container').masonry({
+    columnWidth: 200,
+    itemSelector: '.item'
+  });*/
+
   var windowWidth = $(window).width();
   if (windowWidth > 600) {
       var s = skrollr.init({
@@ -23,13 +42,12 @@ $(function () {
       });
 
       $(window).stellar({ horizontalScrolling: false });
-
   }
 
-  BackgroundCheck.init({
+  /*BackgroundCheck.init({
     targets: '.color-swap',
     images:  '.about-me',
-  });
+  });*/
 
  /*$('.nav-list').onePageNav({
     currentClass: 'current',

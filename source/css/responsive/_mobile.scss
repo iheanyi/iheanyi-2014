@@ -40,20 +40,19 @@ body {
 /* NAVIGATION MODELING */
 
 .navigation {
-
   //display: block;
-  //@include fill-parent;
   width: 100%;
   color: $base-color;
   position: fixed;
   padding: 0;
   margin: 0;
   //width: 20%;
-  height: 80px;
+  height: 60px;
   z-index: 9999;
   //width: 100%;
   vertical-align: middle;
-
+  //background-color: $highlight-color;
+  //background-color: #fff;
   @include media($mobile) {
     @include reset-all();
     width: 100%;
@@ -103,15 +102,15 @@ nav {
   background-color: $accent-color;
   background: none;
   width: 100%;
-  height: 80px;
+  height: 60px;
   vertical-align: middle;
   display: inline-block;
-  line-height: 80px;
+  line-height: 60px;
 
   @include media($mobile) {
     background-color: $accent-color;
     width: 100%;
-    line-height: 40px;
+    line-height: 60px;
   }
 
 
@@ -121,11 +120,10 @@ nav {
     display: block;
     margin: 0;
     padding: 0;
-    //left: 0;
-    //width: 100%;
     font-weight: 300;
     text-align: right;
     vertical-align: middle;
+    line-height: 30px;
     @include span-columns(8);
 
     @include media($mobile) {
@@ -134,12 +132,13 @@ nav {
 
     li {
       font-size: 1.25em;
+      font-variant: small-caps;
       text-align: center;
-      display: inline-block;
-      width: auto;
+      display: inline;
       vertical-align: middle;
-      text-align: center;
-      padding-right: 20px;
+      line-height: 60px;
+      width: auto;
+      margin-right: 20px;
       font-weight: 300;
 
       &:first-child {
@@ -150,7 +149,7 @@ nav {
       }
 
       &:last-child {
-        padding-right: 0px;
+        margin-right: 0;
       }
 
       @include media($mobile) {
@@ -164,13 +163,13 @@ nav {
       }
 
       a {
-
-        color: #fff;
         color: $base-color;
         text-decoration: none;
         text-align: center;
         display: inline-block;
-        vertical-align: middle;
+/*         vertical-align: middle;
+        line-height: 60px; */
+        line-height: 60px;
         letter-spacing: 1px;
         /* While mobile, we want to see what will normally be the tooltip of our menu while on a desktop */
 
@@ -187,24 +186,10 @@ nav {
           }
         }
 
-
-          /*&:after {
-            //content: attr(data-hint);
-            //padding-left: 4px;
-            //content: attr(data-hint);
-            vertical-align: middle;
-            padding-left: 8px;
-            padding-right: 4px;
-            @include media($mobile) {
-              content: attr(data-hint);
-              padding-left: 12px;
-          }
-        }*/
-
         &:hover {
-          //background-color: $accent-color;
           will-change: transform;
           color: $base-color;
+          font-weight: 700;
           border-bottom: 4px solid $accent-color;
         }
       }
@@ -279,7 +264,7 @@ nav {
   &:hover {
     will-change: transform;
 
-    color: $highlight-color;
+    color: $accent-color;
   }
 }
 
@@ -755,12 +740,24 @@ span.cursor {
 
   }
 
+
+  .item {
+    //@include span-columns(4);
+    //@include omega(3n);
+    width: 50%;
+    @include pad();
+    background-color: #fff;
+    padding-bottom: 0;
+    padding-top:0;
+    border-radius: 4px;
+    margin-bottom: 12px;
+
+  }
   .works-content {
     line-height: 2em;
     //font-size: 1.25em;
 
     ul {
-      //display: block;
       list-style: none;
       //@include outer-container;
       margin: 0;

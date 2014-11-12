@@ -4,10 +4,15 @@
         <h3 class="heading big-heading">What Have I Developed?</h3>
         <h4 class="center">Note: Proprietary/research-related projects will not have repo or demo URLs due to non-disclosure agreements. In the future, these project headers will link to their case studies.</h4>
 
-        <div class="works-content">
-          <ul class="">
+        <div id="container" class="works-content">
+<!--           <% blog("projects").articles[0..5].each do |article| %>
+          <div class="item">
+
+          </div>
+          <% end %> -->
+          <ul>
             <% blog("projects").articles[0..5].each do |article| %>
-            <li>
+            <li class="">
 
                 <h3 class="center"><%= article.title %></h3>
 
